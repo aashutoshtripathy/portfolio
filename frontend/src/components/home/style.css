@@ -1,0 +1,60 @@
+body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: url(../../assets/pxfuel.jpg);
+    background-size: cover;
+    background-position: inherit;
+    background-repeat: no-repeat;
+}
+
+.home{
+    width: 100%;
+}
+
+.first{
+    width: 30%;
+    padding: 2%;
+    margin: 0%;
+}
+
+.first img{
+    width: 100%;
+    border-radius: 5%;
+}
+
+.home{
+    display: flex;
+}
+
+.second{
+    width: 45%;
+    margin: 10% 0%;
+    padding: 5%;
+}
+
+
+
+.second h2,p{
+    color: aliceblue;
+}
+
+.second span{
+    color: greenyellow;
+}
+
+.third{
+    margin: 15% 0% 15% 0%;
+    
+}
+
+.third li{
+    background-color:aliceblue;
+    padding: 15%;
+    list-style-type: none;
+    
+}
+.third ul{
+    border-radius: 10%;
+
+}
