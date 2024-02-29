@@ -1,7 +1,9 @@
-import React from 'react'
+import React from 'react';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
+    const navigate = useNavigate();
     const [inpVal, setInpVal] = useState({
         user: '',
         pass: ''
@@ -12,6 +14,10 @@ const Login = () => {
             ...prevVal,
             [identifier]: value
         }))
+    }
+
+    const handleClick = () => {
+        navigate('/home');
     }
 
     
@@ -28,7 +34,7 @@ const Login = () => {
             <label>Password:
                 <input type='password' value={inpVal.pass} onChange={(e) => handleChange('pass',e.target.value)} placeholder='Password' />
             </label>
-            <input type='submit' value={`Login`} />
+            <input type='submit' onClick={handleClick} value={`Login`} />
         </form>
     </div>
   )
