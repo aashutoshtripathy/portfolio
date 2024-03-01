@@ -20,6 +20,10 @@ const Login = () => {
         navigate('/home');
     }
 
+    const handleSignup = () => {
+        navigate('/signup')
+    }
+
     
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -34,6 +38,7 @@ const Login = () => {
             <label>Password:
                 <input type='password' value={inpVal.pass} onChange={(e) => handleChange('pass',e.target.value)} placeholder='Password' />
             </label>
+            <input type='submit' onClick={handleSignup} value={`Sign up`} />
             <input type='submit' onClick={handleClick} value={`Login`} />
         </form>
     </div>
