@@ -62,7 +62,7 @@ const Contact = () => {
       </div>
       
     <ul>
-        <Link to="/"><li><HomeIcon/></li></Link>
+        <Link to="/home"><li><HomeIcon/></li></Link>
         <Link to="/contact"><li><AccountBoxIcon/></li></Link>
         <Link to="/work"><li><WorkOutlineTwoToneIcon/></li></Link>
         <li><ContactMailIcon/></li>

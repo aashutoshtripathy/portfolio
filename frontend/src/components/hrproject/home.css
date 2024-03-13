@@ -1,0 +1,57 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+  }
+  h1{
+    color: crimson;
+    display: flex;
+    justify-content: center;
+  }
+  label {
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 10px 0;
+  }
+  
+  label input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    box-sizing: border-box;
+  }
+  
+  input[type="submit"] {
+    background-color: #1fac99;
+    color: white;
+    cursor: pointer;
+  }
+
+  input[type="submit"]:disabled {
+    background-color: #dddddd;
+    color: #aaaaaa;
+    cursor: not-allowed;
+  }
+  
+  Link {
+    text-decoration: none;
+    color: #db11ca;
+  }
+  
+  Link:hover {
+    color: #020813;
+  }
+  table{
+    justify-content: center;
+  }
+  th{
+    color: aliceblue;
+  }
+  td{
+    color: #dddddd;
+  }
+  
