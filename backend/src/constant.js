@@ -1,1 +1,1 @@
-export const DB_NAME = "signup_form";
+export const DB_NAME = "portfolio";

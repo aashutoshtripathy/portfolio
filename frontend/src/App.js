@@ -1,31 +1,26 @@
-import './App.css';
-import Contact from './components/home/Contact';
-import Home from './components/home/Home';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Work from './components/home/Work';
-import Login from './components/home/Login';
-import Signup from './components/home/Signup';
-import Hrhome from './components/hrproject/Hrhome';
-import Hrview from './components/hrproject/Hrview';
-import Hredit from './components/hrproject/Hredit';
+import React , { lazy } from 'react'
+import {BrowserRouter as Router , Routes , Route} from 'react-router-dom'
+// import Home from './pages/Home'
+// import About from './pages/About'
 
+const Home = lazy(() => import('./pages/Home.js'))
+const Login = lazy(() => import('./pages/Login.js'))
+const Chat = lazy(() => import('./pages/Chat.js'))
+const Group = lazy(() => import('./pages/Group.js'))
 
-function App() {
+const App = () => {
   return (
-    // <Home/>
-    <BrowserRouter>
-    <Routes>
-    <Route path="/" element={<Login />}/>
-    <Route path='/signup' element={<Signup/>}/>
-    <Route path="/home" element={<Home/>}/>
-    <Route path="/contact" element={<Contact />}/>
-    <Route path="/work" element={<Work/>}/>
-    <Route path='/hrhome' element={<Hrhome/>}/>
-    <Route path='/hrview' element={<Hrview/>}/>
-    <Route path='/hredit/:id' element={<Hredit/>}/>
-    </Routes>
-  </BrowserRouter>
-  );
+    <div>
+      <Router>
+        <Routes>
+          <Route path='/' element={<Home/>}/>
+          <Route path='/login' element={<Login/>}/>
+          <Route path='/chat:chatId' element={<Chat/>}/>
+          <Route path='/group' element={<Group/>}/>
+        </Routes>
+      </Router>
+    </div>
+  )
 }
 
-export default App;
+export default App
