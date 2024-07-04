@@ -7,26 +7,46 @@ import VisuallyHiddenInput from '../components/styles/styledComponent.js'
 
 const Login = () => {
   const [isLogin, setIsLogin] = useState(true);
-  const [inputValue, setVnputValue] = useState({
+  const [inputValue, setInputvalue] = useState({
     fname: "",
     lname: "",
     email: "",
     mobile: "",
     pass: "",
-    cpass: ""
+    cpass: "",
+    username: "",
+    password: ""
   })
 
   const handleChange = (identifier,value) => {
-        setVnputValue(prevVal => ({
+        setInputvalue(prevVal => ({
             ...prevVal,
             [identifier]: value
         }))
   }
 
+  const handleLogin = (e) => {
+    e.preventDefault();
+
+    setInputvalue({
+        username: '',
+        password: ''
+    })
+  }
+
+
+
+  const handleSignUp = (e) => {
+    e.preventDefault();
+    
+  }
+
 
   const toggleLogin = () => setIsLogin((prev) => !prev) 
   return (
-    <div>
+    <div style={{
+      backgroundImage: "linear-gradient(rgb(255 255 209), rgb(215 20 20))"
+    }} >
       <Container component={"main"} maxWidth="xs" sx={{
         height: "100vh",
         display: "flex",
@@ -45,11 +65,14 @@ const Login = () => {
           {isLogin ? (
             <>
               <Typography variant="h5">Login</Typography>
-              <form>
+              <form onSubmit={handleLogin}>
                 <TextField
                   required
                   fullWidth
                   label="Username"
+                  value={inputValue.username}
+                  name="username"
+                  onChange={(e) => handleChange('username',e.target.value)}
                   margin="normal"
                   variant="outlined"
                 />
@@ -57,6 +80,9 @@ const Login = () => {
                   required
                   fullWidth
                   label="Password"
+                  value={inputValue.password}
+                  name="password"
+                  onChange={(e) => handleChange('password',e.target.value)}
                   type="password"
                   margin="normal"
                   variant="outlined"
@@ -85,7 +111,7 @@ const Login = () => {
           ) : (
             <>
             <Typography variant="h5">Sign Up</Typography>
-            <form>
+            <form onSubmit={handleSignUp}>
                 <Stack position={"relative"} width={"10rem"} margin={"auto"}>
                 <Avatar sx={{
                     width: "10rem",
