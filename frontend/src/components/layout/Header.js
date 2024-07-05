@@ -59,10 +59,12 @@ const Header = () => {
             <Typography
               variant="h6"
               sx={{
+                fontSize: 'larger',
+                fontWeight: 'bolder',
                 display: { xs: "none", sm: "block" },
               }}
             >
-              chat app
+              बातचीत
             </Typography>
             <Box
               sx={{
